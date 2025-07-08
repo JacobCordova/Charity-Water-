@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charity: water - Give Clean Water</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to extend Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Hero section background image with a dark blue overlay */
+        .hero-section {
+            position: relative;
+            background-image: url('https://placehold.co/1920x1080/003366/FFFFFF?text=Smiling+Child');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* The dark blue overlay */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 23, 44, 0.7); /* Dark blue overlay */
+            z-index: 1;
+        }
+
+        /* Ensure content is above the overlay */
+        .hero-content, header {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Custom focus style for accessibility */
+        .custom-focus-ring:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Main container for the page -->
+    <div class="min-h-screen flex flex-col">
+        
+        <!-- Header Section -->
+        <header class="absolute top-0 left-0 right-0 p-6 md:p-8">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="text-2xl md:text-3xl font-bold tracking-tight">
+                    <span class="bg-yellow-400 text-gray-900 px-2 py-1 rounded-md mr-1">H</span>charity: water
+                </a>
+                
+                <!-- Donate Button -->
+                <a href="#" class="bg-yellow-400 text-gray-900 font-bold py-3 px-6 rounded-lg text-sm md:text-base hover:bg-yellow-300 transition-colors duration-300 custom-focus-ring">
+                    DONATE NOW!
+                </a>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <main class="hero-section flex-grow flex items-center justify-center">
+            <div class="hero-content container mx-auto text-center px-4">
+                
+                <!-- Main Headline -->
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-yellow-400 mb-4 leading-tight">
+                    Give Clean Water.<br>See the Change.
+                </h1>
+                
+                <!-- Sub-headline -->
+                <p class="max-w-3xl mx-auto text-base md:text-lg lg:text-xl text-gray-200 mb-8">
+                    Your donation goes straight to sustainable water projects—with real-time updates and real-world impact. Fast, transparent, and made for changemakers like you.
+                </p>
+                
+                <!-- Email Subscription Form -->
+                <form class="max-w-lg mx-auto flex flex-col sm:flex-row rounded-lg shadow-lg">
+                    <label for="email" class="sr-only">Enter email address for live updates</label>
+                    <input 
+                        type="email" 
+                        id="email"
+                        placeholder="Enter email address for live updates" 
+                        class="w-full sm:flex-grow bg-white text-gray-800 px-5 py-4 rounded-t-lg sm:rounded-l-lg sm:rounded-t-none placeholder-gray-500 border-0 focus:outline-none"
+                        required
+                    >
+                    <button 
+                        type="submit" 
+                        class="bg-gray-700 text-white font-semibold px-8 py-4 rounded-b-lg sm:rounded-r-lg sm:rounded-b-none hover:bg-gray-600 transition-colors duration-300 custom-focus-ring">
+                        Subscribe
+                    </button>
+                </form>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
